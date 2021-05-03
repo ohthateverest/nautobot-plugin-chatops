@@ -4,9 +4,9 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
-from nautobot.utilities.fields import ColorField
-from nautobot.extras.models.change_logging import ChangeLoggedModel
-from nautobot.core.models import BaseModel
+from utilities.fields import ColorField
+from extras.models.change_logging import ChangeLoggedModel
+from core.models import BaseModel
 
 from .choices import AccessGrantTypeChoices, CommandStatusChoices, CommandTokenPlatformChoices
 

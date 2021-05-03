@@ -14,9 +14,9 @@ from django.template.defaulttags import register
 
 from django_tables2 import RequestConfig
 
-from nautobot.core.views.generic import ObjectListView, ObjectEditView, BulkDeleteView
-from nautobot.utilities.paginator import EnhancedPaginator, get_paginate_count
-from nautobot.utilities.forms import TableConfigForm
+from core.views.generic import ObjectListView, ObjectEditView, BulkDeleteView
+from utilities.paginator import EnhancedPaginator, get_paginate_count
+from utilities.forms import TableConfigForm
 
 from nautobot_chatops.workers import get_commands_registry
 from nautobot_chatops.models import CommandLog, AccessGrant, CommandToken

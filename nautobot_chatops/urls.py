@@ -2,7 +2,7 @@
 
 from django.urls import path
 
-from nautobot.extras.views import ObjectChangeLogView
+from extras.views import ObjectChangeLogView
 
 from nautobot_chatops.models import AccessGrant, CommandToken
 from nautobot_chatops.views import (

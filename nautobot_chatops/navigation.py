@@ -1,7 +1,7 @@
 """Plugin additions to the Nautobot navigation menu."""
 
-from nautobot.extras.plugins import PluginMenuItem, PluginMenuButton
-from nautobot.utilities.choices import ButtonColorChoices
+from extras.plugins import PluginMenuItem, PluginMenuButton
+from utilities.choices import ButtonColorChoices
 
 menu_items = (
     PluginMenuItem(

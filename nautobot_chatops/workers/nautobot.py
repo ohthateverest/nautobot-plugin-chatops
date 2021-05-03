@@ -5,13 +5,13 @@ from django.db.models import Count
 from django_rq import job
 from django.contrib.contenttypes.models import ContentType
 
-from nautobot.dcim.models.device_components import Interface
-from nautobot.circuits.models import Circuit, CircuitType, Provider, CircuitTermination
-from nautobot.dcim.choices import DeviceStatusChoices
-from nautobot.dcim.models import Device, Site, DeviceRole, DeviceType, Manufacturer, Rack, Region, Cable
-from nautobot.ipam.models import VLAN, Prefix, VLANGroup, Role
-from nautobot.tenancy.models import Tenant
-from nautobot.extras.models import Status
+from dcim.models.device_components import Interface
+from circuits.models import Circuit, CircuitType, Provider, CircuitTermination
+from dcim.choices import DeviceStatusChoices
+from dcim.models import Device, Site, DeviceRole, DeviceType, Manufacturer, Rack, Region, Cable
+from ipam.models import VLAN, Prefix, VLANGroup, Role
+from tenancy.models import Tenant
+from extras.models import Status
 
 from nautobot_chatops.choices import CommandStatusChoices
 from nautobot_chatops.workers import subcommand_of, handle_subcommands
@@ -678,7 +678,7 @@ def get_device_facts(dispatcher, device_name):
 
 @subcommand_of("nautobot")
 def get_devices(dispatcher, filter_type, filter_value):
-    """Get a filtered list of devices from Nautobot."""
+    """Get a filtered list of devices from """
     if not filter_type:
         prompt_for_device_filter_type("nautobot get-devices", "Select a device filter", dispatcher)
         return False  # command did not run to completion and therefore should not be logged
@@ -784,7 +784,7 @@ def get_devices(dispatcher, filter_type, filter_value):
 
 @subcommand_of("nautobot")
 def get_rack(dispatcher, site_slug, rack_id):
-    """Get information about a specific rack from Nautobot."""
+    """Get information about a specific rack from """
     if menu_item_check(site_slug):
         # Only include sites with a non-zero number of racks
         site_options = [
@@ -847,7 +847,7 @@ def get_rack(dispatcher, site_slug, rack_id):
 
 @subcommand_of("nautobot")
 def get_circuits(dispatcher, filter_type, filter_value):
-    """Get a filtered list of circuits from Nautobot."""
+    """Get a filtered list of circuits from """
     if not filter_type:
         prompt_for_circuit_filter_type("nautobot get-circuits", "Select a circuit filter", dispatcher)
         return False  # command did not run to completion and therefore should not be logged

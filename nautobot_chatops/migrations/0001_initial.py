@@ -2,7 +2,7 @@
 
 import django.contrib.postgres.fields
 from django.db import migrations, models
-import nautobot.utilities.fields
+import utilities.fields
 import uuid
 
 

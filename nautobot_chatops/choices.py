@@ -1,6 +1,6 @@
 """ChoiceSet classes for Nautobot."""
 
-from nautobot.utilities.choices import ChoiceSet
+from utilities.choices import ChoiceSet
 
 
 class AccessGrantTypeChoices(ChoiceSet):
